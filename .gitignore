@@ -1,0 +1,36 @@
+# Large model weights / checkpoints (kept local only)
+*.pth
+*.pdparams
+*.pdopt
+*.pdmodel
+*.pdiparams
+*.pdiparams.info
+
+# Archives / bundles
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Video recordings
+*.mp4
+*.avi
+*.mov
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Third-party vendored library (clone separately)
+Demo/PaddleOCR/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
