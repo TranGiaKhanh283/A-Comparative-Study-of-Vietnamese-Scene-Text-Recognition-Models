@@ -22,7 +22,7 @@ All models are trained and evaluated on the **VinText** dataset, using a consist
 | Approach | Detection | Recognition | Notes |
 | --- | --- | --- | --- |
 | **DBNet + CRNN** | DBNet (ResNet-18 backbone) | CRNN with CTC loss | Two-stage pipeline; detector is trained first, then frozen while CRNN is trained on word crops. |
-| **PaddleOCRv3** | PP-OCRv3 mobile detector | PP-OCRv3 mobile recognizer | Trained with a merged Vietnamese + Latin dictionary; evaluated at 20 and 50 epochs. |
+| **PaddleOCRv3** | PP-OCRv3 mobile detector | PP-OCRv3 mobile recognizer | Similar to DBNet+CRNN in training method. |
 
 ## End-to-End Evaluation Protocol
 

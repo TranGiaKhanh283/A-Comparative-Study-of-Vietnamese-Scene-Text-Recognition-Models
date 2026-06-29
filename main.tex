@@ -1,0 +1,118 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage[section]{placeins}
+\usepackage{needspace}
+
+
+% ---------- Formatting ----------
+\setstretch{1.05}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}[\titlerule]
+
+\titleformat{\subsection}
+  {\bfseries}
+  {}
+  {0em}
+  {}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue
+}
+
+% ---------- Document ----------
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+    {\LARGE \textbf{Tran Gia Khanh}} \\[4pt]
+    27 Tran Duy Hung, Hanoi \;|\; Email:\href{mailto:giakhanh28031995@gmail.com}{giakhanh28031995@gmail.com} \;|\;
+    0353102005 \\[2pt]
+    Linkedin:https://www.linkedin.com/in/khanh-tran-gia-9944a9372/
+\end{center}
+
+% ---------- Education ----------
+\section*{Education}
+\textbf{University of Science and Technology of Hanoi} \hfill 2023 -- 2026 \\
+Bachelor of Data Science (Undergraduate) \\
+GPA: 3.5 / 4.0
+
+\textbf{Vin University} \hfill April 2026 - Present \\
+VinGroup's Applied AI Talent Program(Al Thuc Chien)
+
+
+% ---------- Experience ----------
+\section*{Experience}
+\textbf{Ploomba} — Canadian Agricultural Technology Development  Startup \hfill Oct 2025 -- Present \\
+Company: {https://www.linkedin.com/company/ploomba/posts/?feedView=all}
+\begin{itemize}[leftmargin=1.5em]
+    \item Position: Data Assistant, AI engineer.
+    \item Built and fine-tuned custom YOLO-based computer vision models for fruit detection in agricultural environments, supporting automated farming systems. Annotated and labeled large-scale image datasets, ensuring high-quality ground truth for robust model training. Collaborated with engineering teams to improve detection accuracy and deployment readiness.
+\end{itemize}
+
+% ---------- Projects ----------
+\section*{Projects}
+
+\textbf{Confluex — Automated Literature Review Platform} \hfill Apr 2026 -- Present
+\begin{itemize}[leftmargin=1.5em]
+    \item Position: AI Engineer(VinGroup Applied AI Talent Program — A20, Team 143).
+    \item Built a full-stack academic research workspace that turns a vague research question into a ranked paper library, grounded summaries, and citation-formatted drafts. Designed a multi-agent LangGraph pipeline (Searcher $\rightarrow$ Reader $\rightarrow$ Writer $\rightarrow$ QA) that expands queries, searches Semantic Scholar and arXiv, deduplicates, and ranks results by embedding-based semantic relevance.
+    \item Implemented grounded paper/project chat and a Deep Search agent that synthesizes multi-step reports from academic and web (Tavily) sources, with every claim traceable to a source and QA validation flags to prevent hallucinated citations. Built a Writer agent producing IEEE / APA / Chicago drafts with BibTeX export and a section editor.
+    \item Live demo: \href{https://a20-app-143.vercel.app}{a20-app-143.vercel.app}
+\end{itemize}
+
+\textbf{A Comparative Study of Vietnamese Scene Text Recognition Models} \hfill 2025 -- Jun 2026
+\begin{itemize}[leftmargin=1.5em]
+    \item Position: Bachelor Thesis Author, University of Science and Technology of Hanoi.
+    \item Built and compared two end-to-end Vietnamese scene-text recognition pipelines on the VinText dataset (2{,}000 images, 56K+ annotated instances): a DBNet (ResNet-18) + CRNN (CTC) baseline and a fine-tuned PaddleOCR PP-OCRv3 system (MobileNetV3 detection, SVTR-LCNet recognition). Implemented NFD Unicode normalization for Vietnamese diacritics and a unified evaluation protocol (IoU $\geq$ 0.5 matching, detection/E2E H-mean, CER, WER).
+    \item PP-OCRv3 achieved 51.94\% end-to-end H-mean, 8.26\% CER, and 24.03\% WER on the test set, outperforming DBNet+CRNN (32.47\% E2E H-mean) on recognition while both systems reached comparable detection quality ($\sim$63--65\% H-mean). Benchmarked results against published Dictionary-guided Scene Text Recognition baselines and documented reproducible training pipelines in Jupyter notebooks on Kaggle GPU.
+    \item Link: \href{https://github.com/TranGiaKhanh283/A-Comparative-Study-of-Vietnamese-Scene-Text-Recognition-Models}{github.com/TranGiaKhanh283/A-Comparative-Study-of-Vietnamese-Scene-Text-Recognition-Models}
+\end{itemize}
+
+\textbf{End-to-End Neural Speaker Diarization with Contrastive Learning} \hfill Nov 2025
+\begin{itemize}[leftmargin=1.5em]
+    \item Position: Data Scientist.
+    \item Designed a progressive speaker diarization system from classical clustering baselines to end-to-end neural diarization (EEND). Built an embedding-based pipeline using ECAPA-TDNN embeddings and spectral clustering, achieving 82.1\% frame-level accuracy on VoxConverse. Developed a Conformer-based EEND model with permutation-invariant training (PIT). Introduced contrastive learning pretraining on CallHome data to improve speaker representations. Implemented attention-based speaker pooling and overlap-aware loss weighting.
+    \item Achieved 17.54\% Diarization Error Rate (DER) with under 1 hour training time and 0.18× real-time inference on Kaggle GPU. Conducted component and error analysis, showing attention mechanisms outperform memory-based architectures under limited data regimes.
+    \item Link:https://github.com/TranGiaKhanh283/fundadata/tree/main
+\end{itemize}
+
+
+
+\Needspace{6\baselineskip} 
+\textbf{Pickleball videos Action Recognition} \hfill Oct 2025 -- Present
+\begin{itemize}[leftmargin=1.5em]
+    \item Position: Data Scientist, AI Engineer.
+    \item Designed a pose-based action recognition pipeline using YOLOv11-Pose + LSTM, focusing on motion dynamics rather than raw pixels. Built a custom dataset of 2,680 video clips covering 4 pickleball techniques with balanced class distributions and data generalization. Developed a keyframe extraction module using pretrained YOLOv11-Pose to normalize variable-length videos into fixed-length sequences as train and test data. Built, trained and finetuned LSTM action classifiers models on different parameters configurations.
+    \item Achieving 74\% accuracy on binary classification and 41\% accuracy on 4-class recognition as the best results. Analyzing and concluding for the future improvement: the model requires more diverse and professional data collection, expanding camera angles and techniques, and exploring advanced architectures such as attention and Transformer-based models to improve robustness and accuracy.
+    \item Link:https://github.com/TranGiaKhanh283/Projects
+\end{itemize}
+
+% ---------- Skills ----------
+\section*{Skills}
+\textbf{Programming:} Python, SQL, R \\
+\textbf{Frameworks \& Tools:} PyTorch, TensorFlow, Microsoft Excel \\
+\textbf{Libraries:} Pandas, NumPy, Matplotlib, scikit-learn, Ultralytics \\
+\textbf{Platforms:} Google Colab, Kaggle, GitHub, Roboflow, Hugging Face \\
+\textbf{Languages:} English (IELTS 7.5), French (TCF Tout Public B1)
+
+% ---------- Certificates ----------
+\section*{Certificates}
+Google Data Analytics Certificate \hfill 2025 \\
+Google Advanced Data Analytics Certificate \hfill 2026
+
+\end{document}
