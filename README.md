@@ -40,12 +40,12 @@ All experiments use a fixed seed (`SEED = 42`) for reproducibility.
 .
 ├── Model-SUCCESSFUL/
 │   ├── DBNet+CRNN/
-│   │   ├── dbnet-detect-12epochs.ipynb              # Stage 1: train DBNet detector
-│   │   ├── e2e-crnn-fixed.ipynb                     # Stage 2: train CRNN recognizer
-│   │   └── e2e-dbnet+crnn-12epochs-dict-guided.ipynb# End-to-end DBNet + CRNN pipeline
+│   │   ├── dbnet-detect-12epochs.ipynb              # train DBNet detector
+│   │   ├── e2e-crnn-fixed.ipynb                     # CRNN recognizer
+│   │   
 │   └── PaddleOCRv3/
-│       ├── ppocrv3-recog-20fixed.ipynb              # PaddleOCRv3 recognizer (20 epochs)
-│       └── ppocrv3-recog-50epochs.ipynb             # PaddleOCRv3 recognizer (50 epochs)
+│       ├── PPOCRv3-detect-100epochs(curves).ipynb   # PaddleOCRv3 detector
+│       └── ppocrv3-recog-50epochs.ipynb             # PaddleOCRv3 recognizer 
 ├── report.pdf                                       # Full written report
 └── README.md
 ```
