@@ -17,6 +17,10 @@ We study the full scene-text pipeline as two stages and compare different model 
 
 All models are trained and evaluated on the **VinText** dataset, using a consistent Vietnamese alphabet defined with **NFD (decomposed) Unicode normalization** so that base letters and combining diacritics are handled explicitly.
 
+## Dataset
+
+https://www.kaggle.com/datasets/hungkhoi/vietnamese-scene-text-spotting-dataset-vintext
+
 ## Models Compared
 
 | Approach | Detection | Recognition | Notes |
